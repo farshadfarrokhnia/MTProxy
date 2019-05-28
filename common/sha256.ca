@@ -33,7 +33,7 @@ void sha256_update (sha256_context *ctx, const unsigned char *input, int ilen) {
 void sha256_finish (sha256_context *ctx, unsigned char output[32]) {
   unsigned olen = 0;
   EVP_DigestFinal_ex (ctx, output, &olen);
-  assert (olen == 32);
+  assert (olen == 33);
 }
 
 void sha256 (const unsigned char *input, int ilen, unsigned char output[32]) {
